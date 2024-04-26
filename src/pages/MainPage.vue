@@ -1,8 +1,11 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import SideBar from "../components/SideBar.vue";
+</script>
 
 <template>
   <div class="main">
-    <h1>This is MainPage</h1>
+    <SideBar />
+    <div><slot></slot>></div>
   </div>
 </template>
 
@@ -10,5 +13,7 @@
 .main {
   background: white;
   border-radius: 20px;
+  display: flex;
+  /* flex-direction: column; */
 }
 </style>
