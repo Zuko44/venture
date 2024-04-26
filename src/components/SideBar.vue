@@ -9,16 +9,14 @@
     <div class="parent">
       <ul class="panel">
         <li><img src="../assets/icons/auth.png" />Авторизация</li>
-        <li>
-          <RouterLink class="allSpace" to="/dashboard"
-            ><img src="../assets/icons/dashboard.png" />Дашборд</RouterLink
-          >
-        </li>
-        <li>
-          <RouterLink class="allSpace" to="/goods"
-            ><img src="../assets/icons/goods.png" />Товары</RouterLink
-          >
-        </li>
+        <RouterLink class="allSpace" to="/dashboard"
+          ><li>
+            <img src="../assets/icons/dashboard.png" />Дашборд
+          </li></RouterLink
+        >
+        <RouterLink class="allSpace" to="/goods">
+          <li><img src="../assets/icons/goods.png" />Товары</li>
+        </RouterLink>
       </ul>
     </div>
     <hr />
@@ -117,5 +115,14 @@ a {
 
 .allSpace {
   display: block;
+}
+
+a.router-link-exact-active {
+  font-weight: 600;
+  background: RGB(242, 242, 242);
+}
+
+a.router-link-exact-active:hover {
+  background: RGB(242, 242, 242);
 }
 </style>
