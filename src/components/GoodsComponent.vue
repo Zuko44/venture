@@ -18,6 +18,7 @@ const getProducts = (num?: number) => {
 
 const filterProducts = () => {
   if (simpleFilter.value.length > 1) {
+    products.value = temporaryProductsStorage.value;
     products.value = products.value.filter(
       (product) =>
         product.category.includes(simpleFilter.value) ||
@@ -57,7 +58,7 @@ onMounted(() => {
         v-model="simpleFilter"
         placeholder="найти продукт"
         class="fields"
-        @change="filterProducts"
+        @keyup="filterProducts"
       />
     </div>
     <table>
