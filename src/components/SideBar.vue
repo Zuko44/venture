@@ -3,7 +3,9 @@
 <template>
   <div class="wrapper">
     <div class="logo">
-      <img src="../assets/logo/Logo.png" />
+      <RouterLink class="allSpace" to="/">
+        <img src="../assets/logo/Logo.png" />
+      </RouterLink>
     </div>
     <hr />
     <div class="parent">
