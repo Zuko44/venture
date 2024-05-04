@@ -4,8 +4,9 @@ import SideBar from "../components/SideBar.vue";
 
 <template>
   <div class="main">
-    <SideBar />
-    <div><slot></slot>></div>
+    <div>
+      <slot>This is MainPage</slot>
+    </div>
   </div>
 </template>
 

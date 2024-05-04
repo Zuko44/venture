@@ -8,16 +8,16 @@
     <hr />
     <div class="parent">
       <ul class="panel">
-        <li><img src="../assets/icons/auth.png" />Авторизация</li>
+        <li><img src="../assets/icons/auth.svg" />Авторизация</li>
         <li>
           <RouterLink class="allSpace" to="/dashboard"
-            ><img src="../assets/icons/dashboard.png" />Дашборд
+            ><img src="../assets/icons/dashboard.svg" />Дашборд
           </RouterLink>
         </li>
 
         <li>
           <RouterLink class="allSpace" to="/goods"
-            ><img src="../assets/icons/goods.png" />Товары</RouterLink
+            ><img src="../assets/icons/goods.svg" />Товары</RouterLink
           >
         </li>
       </ul>
@@ -25,21 +25,21 @@
     <hr />
     <div class="parent">
       <ul>
-        <li><img src="../assets/icons/anal.png" />Аналитика</li>
-        <li><img src="../assets/icons/contacts.png" />Контакты</li>
-        <li><img src="../assets/icons/portfolio.png" />Компании</li>
+        <li><img src="../assets/icons/anal.svg" />Аналитика</li>
+        <li><img src="../assets/icons/contacts.svg" />Контакты</li>
+        <li><img src="../assets/icons/portfolio.svg" />Компании</li>
       </ul>
     </div>
     <hr />
     <div class="parent">
       <ul>
-        <li><img src="../assets/icons/squares.png" />Интеграции</li>
-        <li><img src="../assets/icons/settings.png" />Настройки</li>
+        <li><img src="../assets/icons/squares.svg" />Интеграции</li>
+        <li><img src="../assets/icons/settings.svg" />Настройки</li>
       </ul>
     </div>
     <div class="bottom">
       <ul>
-        <li><img src="../assets/icons/login.png" />Кабинет</li>
+        <li><img src="../assets/icons/login.svg" />Кабинет</li>
       </ul>
     </div>
   </div>

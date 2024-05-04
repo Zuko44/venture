@@ -16,6 +16,5 @@
 
 .warapper {
   display: flex;
-  flex-direction: row;
 }
 </style>
