@@ -1,8 +1,10 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import AuthorizationForm from "../components/AuthorizationForm.vue";
+</script>
 
 <template>
   <div class="main">
-    <h1>This is MainPage</h1>
+    <AuthorizationForm />
   </div>
 </template>
 
