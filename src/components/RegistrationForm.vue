@@ -2,21 +2,13 @@
 import { registration } from "../api/api";
 import router from "../router";
 import { ref } from "vue";
-import { useAuthStore } from "../stores/auth";
-import MessageComponent from "../components/MessageComponent.vue";
-import LoaderComponent from "../components/LoaderComponent.vue";
 
-const authStore = useAuthStore();
 const userName = ref<string>();
 const phoneNumber = ref<number>();
-const email = ref<string>();
 const password = ref<string>();
 const file = ref<File | null>();
 const msg = ref<string>();
 const success = ref<boolean>();
-const signup = async () => {
-  await authStore.signup({ email: email.value, password: password.value });
-};
 
 const handleFileChange = (e: any) => {
   if (e.target && e.target.files) {
@@ -73,7 +65,6 @@ const registrationHandler = () => {
     </div>
     <div class="rightPart">
       <div class="formWrapper">
-        <MessageComponent v-if="authStore.error" :error="authStore.error" />
         <h1>Добро пожаловать</h1>
         <div :class="{ error: success === false, success: success === true }">
           {{ msg }}
@@ -98,10 +89,6 @@ const registrationHandler = () => {
             />
           </fieldset>
           <fieldset>
-            <legend>Email</legend>
-            <input v-model="email" name="email" type="email" class="password" />
-          </fieldset>
-          <fieldset>
             <legend>Пароль</legend>
             <input
               v-model="password"
@@ -122,15 +109,11 @@ const registrationHandler = () => {
           <div class="auth">
             <RouterLink to="/authorization">Авторизация</RouterLink>
           </div>
-          <!-- <button
+          <button
             type="button"
             class="btn"
             @click.prevent="registrationHandler"
           >
-            Регистрация
-          </button> -->
-          <LoaderComponent class="loader" v-if="authStore.loader" />
-          <button v-else type="button" class="btn" @click="signup">
             Регистрация
           </button>
         </form>
@@ -279,6 +262,7 @@ legend {
   background-color: RGB(0, 158, 226);
   border: none;
   border-radius: 7px;
+  cursor: pointer;
 }
 
 .auth a {
